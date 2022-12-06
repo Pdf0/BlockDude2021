@@ -1,29 +1,35 @@
-# Laboratórios de Informática I
+# <p style="text-align: center;"> Block Dude 2021</p>
 
-## Repositório
+Project developed for the subject "IT Labs I" written in Haskell, using [Gloss](https://hackage.haskell.org/package/gloss) for the 2D Graphics. This is a recreation of the original [Block Dude](https://azich.org/blockdude/) game.
 
-O sistema de controlo de versões utilizado é o git. O repositório encontra-se disponível [nesta organização](https://gitlab.com/uminho-di/li1/2122). Para obter o repositório na sua máquina, garanta que tem a chave pública SSH adicionada na sua conta do GitLab com o email instituicional ([User Settings/SSH Keys](https://gitlab.com/-/profile/keys)), depois basta efetuar clone ao repositório.
+## Additional Haskell libraries
+
+The project runs with some external haskell libraries.
 
 ```bash
-$ git clone git@gitlab.com:uminho-di/li1/2122/2021li1g054.git
-$ cd 2021li1g054 
+$ cabal update
 ```
 
-## Testes
+#### Gloss
 
-O projecto contém testes unitários escritos usando a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit). Os testes podem ser executados da seguinte forma.
+```bash
+$ cabal install --lib gloss
+```
+#### Random
+```bash
+$ cabal install --lib random
+```
+
+## Unit Tests
+
+This project contains unit tests written using the [HUnit](https://hackage.haskell.org/package/HUnit) library. Tests can be run as follows:
 
 ```bash
 $ ghci -i="src" -i="tests" tests/Tests.hs
->>> runTestsT1 -- Correr os testes tarefa 1
->>> runTestsT2 -- Correr os testes tarefa 2
->>> runTestsT3 -- Correr os testes tarefa 3
->>> runTestsT4 -- Correr os testes tarefa 4
->>> runTestsT6 -- correr os testes tarefa 6
->>> runAllTests -- Correr todos os testes
+>>> runTestsT1 -- Run task 1 tests
+>>> runTestsT2 -- Run task 2 tests
+>>> runTestsT3 -- Run task 3 tests
+>>> runTestsT4 -- Run task 4 tests
+>>> runTestsT6 -- Run task 5 tests
+>>> runAllTests -- Run all tests
 ```
-
-## Grupo 54
-
-- **A100823** Pedro Eira de Sousa;
-- **A100713** Vicente Costa Martins;
